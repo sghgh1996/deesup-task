@@ -1,6 +1,11 @@
 {
   "name": "deesup-newsletter-popup",
   "version": "1.0.0",
+  "description": "This is my personal blog about traveling around the globe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sghgh1996/deesup-task"
+  },
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -30,6 +35,8 @@
     "eslint": "^7.2.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "jest": "^26.0.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "vue-jest": "^3.0.4"
