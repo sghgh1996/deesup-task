@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import newsLetterModalContent from '~/components/news-letter-modal-content'
+import newsLetterModalContent from '~/components/news-letter/news-letter-modal-content'
 
 export default {
   components: {

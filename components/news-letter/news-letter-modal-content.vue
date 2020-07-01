@@ -1,18 +1,28 @@
 <template>
   <b-row>
-    <b-col class="image-section" cols="6">
+    <b-col class="image-section" lg="6">
       <div class="image-overlay" />
       <div class="text-section d-flex align-items-center justify-content-center">
         <div class="text-center font-weight-bold">
-          trova la tua icona <br /> nella prossima newsletter
+          TROVA LA TUA ICONA <br /> NELLA PROSSIMA NEWSLETTER
         </div>
       </div>
     </b-col>
-    <b-col cols="6">
-      newsletter Form
+    <b-col lg="6" class="px-5 py-5 mt-5">
+      <news-letter-form />
     </b-col>
   </b-row>
 </template>
+
+<script>
+import newsLetterForm from '~/components/news-letter/news-letter-form'
+
+export default {
+  components: {
+    newsLetterForm
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 
