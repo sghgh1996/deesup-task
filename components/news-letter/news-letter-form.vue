@@ -1,13 +1,17 @@
 <template>
   <div class="c-news-letter-from d-flex flex-column align-items-center">
     <div class="my-5 title-form">unisciti alla nostra community di <b>design lovers</b></div>
-    <b-form-input
-      v-model="form.email"
-      type="email"
-      required
-      placeholder="Inserisci la tua email"
-      class="mb-2"
-    />
+
+    <ValidationProvider rules="email|required" v-slot="{ errors }">
+      <b-form-input
+        v-model="form.email"
+        type="text"
+        placeholder="Inserisci la tua email"
+        class="mb-2"
+      />
+      {{ errors }}
+    </ValidationProvider>
+
     <b-button class="button-form my-4">INVIA</b-button>
 
     <b-form-checkbox
@@ -23,7 +27,12 @@
 </template>
 
 <script>
+import { ValidationProvider } from 'vee-validate'
+
 export default {
+  components: {
+    ValidationProvider
+  },
   data () {
     return {
       form: {
