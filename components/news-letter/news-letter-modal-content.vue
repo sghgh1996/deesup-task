@@ -2,24 +2,31 @@
   <b-row>
     <b-col class="image-section" lg="6">
       <div class="image-overlay" />
-      <div class="text-section d-flex align-items-center justify-content-center">
-        <div class="text-center font-weight-bold">
+      <div class="text-section d-flex align-items-center justify-content-center flex-wrap">
+        <div class="text-center font-weight-bold text-justify text-last-center">
           TROVA LA TUA ICONA <br /> NELLA PROSSIMA NEWSLETTER
         </div>
+        <news-letter-form v-if="isMobileDevice" />
       </div>
     </b-col>
-    <b-col lg="6" class="px-5 py-5 mt-5">
+    <b-col v-if="!isMobileDevice" lg="6" class="px-5 py-5 mt-5">
       <news-letter-form />
     </b-col>
   </b-row>
 </template>
 
 <script>
+import { isMobile } from 'mobile-device-detect'
 import newsLetterForm from '~/components/news-letter/news-letter-form'
 
 export default {
   components: {
     newsLetterForm
+  },
+  computed: {
+    isMobileDevice () {
+      return isMobile
+    }
   }
 }
 </script>
@@ -55,7 +62,11 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+
+      @media (max-width: 991px) {
+        padding: 20px 30px;
+      }
     }
   }
 </style>
