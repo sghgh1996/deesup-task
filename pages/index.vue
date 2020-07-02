@@ -1,10 +1,12 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">
         deesup-newsletter-popup-task
       </h1>
+      <h5>
+        The newsletter popup comes up after 2 seconds from the initial load on every page
+      </h5>
       <div class="links">
         <a
           href="https://github.com/sghgh1996/deesup-task"
@@ -18,10 +20,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style>
 .container {

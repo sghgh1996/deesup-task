@@ -143,6 +143,11 @@ export default {
           text-transform: uppercase;
         }
       }
+      @media (min-width: 992px) {
+        b {
+          font-style: italic;
+        }
+      }
     }
 
     .privacy-text {
