@@ -128,5 +128,21 @@ export default {
         width: 100px;
       }
     }
+
+    ::-webkit-input-placeholder {
+      text-align: center;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+      text-align: center;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+      text-align: center;
+    }
+
+    :-ms-input-placeholder {
+      text-align: center;
+    }
   }
 </style>
